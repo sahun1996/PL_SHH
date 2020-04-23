@@ -3,7 +3,7 @@
 count = 1
 list_odd = []
 
-while count <= 100000:
+while count <= 10:
     if count % 2 != 0:
         list_odd.append(count)
         count += 1
@@ -18,7 +18,7 @@ print(list_odd)
 count = 1
 list_div = []
 
-while count <= 100000:
+while count <= 10:
     if count % 123 == 74:
         list_div.append(count)
         count += 1
@@ -34,7 +34,7 @@ Fibo1 = 1
 Fibo2 = 1
 list_Fibo = []
 
-while Fibo1 <= 100000:
+while Fibo1 <= 10:
     n = Fibo2
     Fibo2 = Fibo1 + Fibo2
     Fibo1 = n
@@ -47,7 +47,7 @@ print(list_Fibo)
 
 count = 1
 list_prime = []
-while count <= 100000:
+while count <= 10:
     list_prime = []
     for n in range(1,count+1):
         if count % n == 0:
@@ -65,7 +65,7 @@ print(list_prime)
 
 ## 1 ~ 100000 까지 369 게임
 count = 1
-while count <= 100000:
+while count <= 10:
     String = ""
     n = 4
     m = count
@@ -115,5 +115,11 @@ for i in range(2,n+1):
 ## unsortedList = [3, 6, 1, 19, 8, 47, 2, 5] 정렬
 
 unsortedList = [3, 6, 1, 19, 8, 47, 2, 5]
-unsortedList.sort()
+sortedList = []
+
+while len(unsortedList) >0:
+    sortedList.append(min(unsortedList))
+    unsortedList.remove(min(unsortedList))
+
+unsortedList = sortedList
 print(unsortedList)
